@@ -35,8 +35,8 @@ object TasksRemoteDataSource : TasksDataSource {
     private var TASKS_SERVICE_DATA = LinkedHashMap<String, Task>(2)
 
     init {
-        addTask("Build tower in Pisa", "Ground looks good, no foundation work required.")
-        addTask("Finish bridge in Tacoma", "Found awesome girders at half the cost!")
+        // addTask("Build tower in Pisa", "Ground looks good, no foundation work required.")
+        // addTask("Finish bridge in Tacoma", "Found awesome girders at half the cost!")
     }
 
     private val observableTasks = MutableLiveData<Result<List<Task>>>()

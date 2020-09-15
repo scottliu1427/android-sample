@@ -1,5 +1,5 @@
 # Android Sample
-> forked from [android/architecture-samples](https://github.com/android/architecture-samples)
+> Mirroring from [android/architecture-samples](https://github.com/android/architecture-samples)
 
 ## Opening a sample in Android Studio
 

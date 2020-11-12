@@ -45,7 +45,7 @@ class testUtil {
         }
         Thread.sleep(2000)
         Espresso.openActionBarOverflowOrOptionsMenu(InstrumentationRegistry.getInstrumentation().getTargetContext())
-        Thread.sleep(2000)
+        //Thread.sleep(2000)
         onView(withText("Clear completed")).perform(ViewActions.click())
         
     }

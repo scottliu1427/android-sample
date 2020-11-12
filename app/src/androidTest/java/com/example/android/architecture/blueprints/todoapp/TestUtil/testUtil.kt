@@ -44,6 +44,7 @@ class testUtil {
             onView(withId(R.id.tasks_list)).perform(RecyclerViewActions.actionOnItemAtPosition<RecyclerView.ViewHolder>(i , clickItemWithId(R.id.complete_checkbox)))
         }
         Espresso.openActionBarOverflowOrOptionsMenu(InstrumentationRegistry.getInstrumentation().getTargetContext())
+        Thread.sleep(1000)
         onView(withText("Clear completed")).perform(ViewActions.click())
     }
     fun clickItemWithId(id: Int): ViewAction {

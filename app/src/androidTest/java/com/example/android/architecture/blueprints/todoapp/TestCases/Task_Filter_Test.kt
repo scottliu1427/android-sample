@@ -157,6 +157,7 @@ class Task_Filter_Test {
         onView(withId(R.id.tasks_list)).perform(RecyclerViewActions.actionOnItemAtPosition<RecyclerView.ViewHolder>(1 , clickItemWithId(R.id.complete_checkbox)))
 
         //點選menu並點選Complete
+        Thread.sleep(1000)
         onView(ViewMatchers.withId(R.id.menu_filter)).perform(ViewActions.click())
         onView(ViewMatchers.withText(R.string.nav_completed)).perform(ViewActions.click())
         Thread.sleep(1000)

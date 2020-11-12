@@ -140,6 +140,11 @@ class Task_Filter_Test {
         onView(ViewMatchers.withId(R.id.menu_filter)).perform(ViewActions.click())
         onView(ViewMatchers.withText(R.string.nav_completed)).perform(ViewActions.click())
 
+        //verify
+        onView(withId(R.id.no_tasks_icon)).check(matches(withDrawable(R.drawable.ic_verified_user_96dp)))
+        onView(withId((R.id.no_tasks_text))).check((matches(withText("You have no completed tasks!"))))
+
+
         util.deleteTasksByCustomer(3)
     }
 

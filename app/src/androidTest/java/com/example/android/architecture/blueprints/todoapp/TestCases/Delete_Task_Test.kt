@@ -8,6 +8,7 @@ import androidx.test.espresso.matcher.ViewMatchers.*
 import androidx.test.ext.junit.rules.ActivityScenarioRule
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.example.android.architecture.blueprints.todoapp.R
+import com.example.android.architecture.blueprints.todoapp.TestUtil.IdList
 import com.example.android.architecture.blueprints.todoapp.TestUtil.testUtil
 import com.example.android.architecture.blueprints.todoapp.tasks.TasksActivity
 import org.hamcrest.Matchers.not
@@ -23,10 +24,11 @@ class Delete_Task_Test {
     @Test
     fun Delete_Task_in_Task_Detail_Test(){
         val util = testUtil()
+        val idList = IdList()
         util.prepareTasksByCustomer(1)
 
         onView(withText("Task01")).perform(click())
-        onView(withId(R.id.menu_delete)).perform(click())
+        onView(idList.menu_delete).perform(click())
 
         //verify
         onView(withText("Task01")).check(doesNotExist())
